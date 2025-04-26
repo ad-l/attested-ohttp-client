@@ -1,0 +1,36 @@
+{
+  "name": "attested-ohttp-client-ts",
+  "version": "0.1.0",
+  "authors": ["Antoine Delignat-Lavaud <antdl@microsoft.com>"],
+  "description": "TypeScript port of the attested OHTTP client",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "node dist/src/index.js",
+    "dev": "tsc -w & nodemon dist/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example": "npm run build && node dist/examples/kms-attestation.js",
+    "example:basic": "npm run build && node dist/examples/basic-usage.js", 
+    "example:kms": "npm run build && node dist/examples/kms-attestation.js",
+    "test:key-config": "npm run build && node dist/examples/test-key-config.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "ohttp",
+    "attestation"
+  ],
+  "author": "",
+  "license": "MIT OR Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/yargs": "^17.0.33",
+    "yargs": "^17.7.2",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "hpke-js": "^1.6.2",
+    "bhttp-js": "^0.3.6"
+  }
+}
